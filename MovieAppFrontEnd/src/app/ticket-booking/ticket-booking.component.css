@@ -1,0 +1,89 @@
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 5rem);
+  justify-content: space-evenly;
+  gap: 1rem;
+  width: 70%;
+  margin: auto;
+  /* border: 1px solid red; */
+}
+
+h2, h3, h4 {
+  color: #002447;
+}
+
+select {
+  border: none;
+  width: 7%;
+  border-radius: 0.5rem;
+  font-size: large;
+  background-color: #002447;
+  color: #FBECEB;
+  text-align: center;
+  padding: 0.5rem;
+  margin-left: 1rem;
+}
+
+.seating {
+  border: 1px solid red;
+  min-height: 100%;
+  text-align: center;
+  position: relative;
+  padding-top: 5%;
+  background-color: #FBECEB;
+}
+
+.screen {
+  width: 55%;
+  margin: auto;
+  margin-bottom: 5rem;
+  font-size: small;
+  color: #FEB249;
+  background-color: #002447;
+}
+
+.seat {
+  width: 4rem;
+  font-size: x-large;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #FEB249;
+  border-radius: 0.5rem;
+  border: none;
+  color: #002447;
+  border: 2px solid #002447;
+}
+
+.seat.booked {
+  background-color: crimson;
+  color: #002447;
+}
+
+.seat.selected {
+  background-color: green;
+}
+
+button {
+  cursor: pointer;
+}
+
+.button {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #002447;
+  border: none;
+  color: #FEB249;
+  border: 3px solid #002447;
+  color: #002447;
+  background-color: #FBECEB;
+
+}
+
+.button:hover {
+  background-color: #002447;
+  color: #FEB249;
+}

@@ -1,0 +1,66 @@
+h2 {
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  text-align: left;
+}
+
+.login-form {
+  box-shadow: 0.1rem 0.2rem 0.2rem rgb(128, 128, 128, 0.3);
+  /* padding: 1rem; */
+  border-radius: 1rem;
+  /* border: 1px solid red; */
+  margin: auto;
+  position: relative;
+  top: 40%;
+  translate: 0 -50%;
+  height: 70%;
+  display: flex;
+  width: 80%;
+  background-color: #FBECEB;
+  overflow: hidden;
+  color: #002447;
+}
+
+
+.form-signin {
+  text-align: center;
+  /* border: 1px solid red; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  margin-right: 2rem;
+}
+
+button {
+  margin-top: 1rem;
+  background-color: #FEB249;
+  /* border: 1px solid red; */
+}
+
+input {
+  height: 4rem;
+}
+
+img {
+  width: 70%;
+  margin-right: 3rem;
+}
+
+button {
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  color: #002447;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #FEB249;
+  background-color: #002447;
+}

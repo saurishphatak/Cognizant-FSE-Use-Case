@@ -1,0 +1,40 @@
+<div style="background-color: #FBECEB; min-height: 100%; border: 1px solid #FBECEB; min-width: 100%">
+  <div class="form-group mt-5">
+    <input type="text" class="form-control" id="searchmovie" [(ngModel)]="searchMovie"
+      placeholder="Search by movie name" autofocus (input)="findMovieBySearch(searchMovie)">
+  </div>
+  <div *ngIf="searchMovie.trim().length" class="movie-grid mt-5">
+    <!-- <p-card *ngFor="let movie of moviesList" [header]="movie.movieName" [subheader]="movie.theatreName"
+    [style]="{width:'286px'}">
+    <p-button label="Book Now" (onClick)="bookTickectsNavigation(movie)"></p-button>
+    <button *ngIf="service.isAdmin" class="btn btn-lg btn-danger" (click)="deleteMovie(movie)"
+      [style]="{'margin-left':'.5em'}">Delete</button>
+  </p-card> -->
+    <div class="movie-card" *ngFor="let movie of moviesList">
+
+      <img alt="Card" [src]="movie.imageURL" style="height: 150px; object-fit: cover;" />
+      <div class="movie-card__content">
+        <h4>{{movie.movieName}}</h4>
+        <p>{{movie.theatreName}}</p>
+      </div>
+      <div class="movie-card__btn-grp">
+        <button (click)="bookTickectsNavigation(movie)">Book</button>
+        <button *ngIf="service.isAdmin" (click)="deleteMovie(movie)">Delete</button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="searchMovie.trim().length==0" class="movie-grid">
+    <div class="movie-card" *ngFor="let movie of moviesList">
+
+      <img alt="Card" [src]="movie.imageURL" style="height: 150px; object-fit: cover;" />
+      <div class="movie-card__content">
+        <h4>{{movie.movieName}}</h4>
+        <p>{{movie.theatreName}}</p>
+      </div>
+      <div class="movie-card__btn-grp">
+        <button label="Book Now" (click)="bookTickectsNavigation(movie)">Book</button>
+        <button *ngIf="service.isAdmin" (click)="deleteMovie(movie)">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

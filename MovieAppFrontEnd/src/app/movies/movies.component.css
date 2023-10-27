@@ -1,0 +1,78 @@
+/* .movie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px;
+
+} */
+
+.movie-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+  min-height: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* border: 1px solid red; */
+}
+
+input {
+  border: 2px solid #002447;
+  width: 50%;
+  margin: auto;
+  background-color: #FBECEB;
+}
+
+input:focus {
+  color: #002447;
+  background-color: #FBECEB;
+}
+
+/* @media (min-width:40em) {
+  .movie-grid {
+    grid-template-columns: repeat(4, 1fr);
+
+  }
+} */
+
+.movie-card {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: 25rem;
+  box-shadow: 0.1rem 0.2rem 0.2rem rgb(128, 128, 128, 0.3);
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #002447;
+  color: #FBECEB;
+}
+
+.movie-card__content {
+  padding-top: 1rem;
+  /* border: 1px solid red; */
+  text-align: center;
+}
+
+.movie-card__btn-grp {
+  display: flex;
+  justify-content: space-evenly;
+  /* border: 1px solid red; */
+  width: 70%;
+  margin: auto;
+}
+
+button {
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  color: #002447;
+  border: none;
+  cursor: pointer;
+  background-color: #FBECEB;
+  width: 40%;
+}
+
+button:hover {
+  color: #002447;
+  background-color: #FEB249;
+}

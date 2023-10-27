@@ -1,0 +1,30 @@
+<div class="seating">
+  <div class="my-4">
+    <h3>{{movieName}}</h3>
+    <h4>{{theatreName}}</h4>
+    <h6>{{status}}</h6>
+    <label for="numberOfSeats"><b>Number of Seats :</b></label>
+    <select name="numberOfSeats" id="numberOfSeats" [(ngModel)]="noOfSeats" (change)="onChangeOfNoOfSeats()">
+      <option [disabled]="number>availableSeats" *ngFor="let number of numberOfSeatsSelect" [value]="number">
+        {{number}}</option>
+    </select>
+  </div>
+
+  <div class="screen">Screen</div>
+
+  <div class="seat-grid">
+    <button *ngFor="let seatNumber of totalSeats" class="seat" [ngClass]="{
+            'booked':isSeatBooked(seatNumber),
+            'selected':isSeatSelected(seatNumber)
+        }" (click)="toggleSeatSelection(seatNumber)"
+      [disabled]="isSeatBooked(seatNumber)||(selectedSeats.length == noOfSeats && !isSeatSelected(seatNumber))">
+      {{seatNumber}}
+    </button>
+  </div>
+
+  <div>
+    <button *ngIf="!(this.availableSeats == 0)" [disabled]="selectedSeats.length != noOfSeats || noOfSeats==0"
+      class="button" (click)="bookSeats()">Book Seats</button>
+    <button class="button" routerLink="/movies">Back</button>
+  </div>
+</div>

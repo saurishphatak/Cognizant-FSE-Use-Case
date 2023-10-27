@@ -1,0 +1,33 @@
+<div class="login-form justify-content-center col-lg-4 mt-5">
+  <img
+    src="https://media.istockphoto.com/id/1566653954/photo/hands-holding-clapper-board-making-video-cinema-in-the-studio-movie-production-clapper-board.webp?b=1&s=170667a&w=0&k=20&c=6Q40NxZ5hsiFXsb4cAuBNKbAv1zUAx2bgowvBXALmy4="
+    alt="">
+  <form class="form-signin" [formGroup]="this.form">
+    <h2 class="form-signin-heading">Login</h2>
+    <div class="form-group mt-2">
+
+      <input class="form-control" placeholder="Username*" id="loginid" type="text" formControlName="loginId"
+        name="loginid" required />
+      <div *ngIf="this.form.get('loginId')?.touched && this.form.get('loginId')?.errors">
+        <span class="error-message">Username is mandatory</span>
+      </div>
+
+    </div>
+    <div class="form-group mt-2">
+      <input class="form-control" placeholder="Password*" id="password" type="password" formControlName="password"
+        name="password" required />
+      <div *ngIf="this.form.get('password')?.touched && this.form.get('password')?.errors">
+        <span class="error-message">Password is mandatory</span>
+      </div>
+    </div>
+
+    <button class="" [disabled]="form.invalid" (click)="onSubmit()">Login</button>
+
+    <div>
+      <a routerLink="/forgotpassword">Forgot Password</a>
+      <p class="mb-0">OR</p>
+      <p>Don't have an account <a routerLink="/register">Sign Up</a></p>
+    </div>
+  </form>
+
+</div>

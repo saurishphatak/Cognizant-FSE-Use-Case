@@ -1,0 +1,8 @@
+div {
+  /* background-image: url(../assets/1.webp); */
+  /* background-color: #002447; */
+  object-fit: cover;
+  background-repeat: no-repeat;
+  border: 1px solid white;
+  height: 100%;
+}

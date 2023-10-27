@@ -1,0 +1,101 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/saurishphatak/Desktop/Cognizant FSE1/Use Case/Frontend/MovieBookingApp/Solution1/AuthenticationAPI/AuthenticationAPI.csproj": {}
+  },
+  "projects": {
+    "/Users/saurishphatak/Desktop/Cognizant FSE1/Use Case/Frontend/MovieBookingApp/Solution1/AuthenticationAPI/AuthenticationAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/saurishphatak/Desktop/Cognizant FSE1/Use Case/Frontend/MovieBookingApp/Solution1/AuthenticationAPI/AuthenticationAPI.csproj",
+        "projectName": "AuthenticationAPI",
+        "projectPath": "/Users/saurishphatak/Desktop/Cognizant FSE1/Use Case/Frontend/MovieBookingApp/Solution1/AuthenticationAPI/AuthenticationAPI.csproj",
+        "packagesPath": "/Users/saurishphatak/.nuget/packages/",
+        "outputPath": "/Users/saurishphatak/Desktop/Cognizant FSE1/Use Case/Frontend/MovieBookingApp/Solution1/AuthenticationAPI/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/saurishphatak/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/sdk/7.0.302/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AspNetCore.Identity.MongoDbCore": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.17.2, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.19.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.16, 6.0.16]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-arm64",
+              "version": "[6.0.16, 6.0.16]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.16, 6.0.16]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

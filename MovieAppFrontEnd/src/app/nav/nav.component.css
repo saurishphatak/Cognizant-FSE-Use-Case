@@ -1,0 +1,30 @@
+.navbar {
+  /* background-color: #53D3D1; */
+  background-color: #FEB249;
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+}
+
+button {
+  /* background-color: #002470; */
+  background-color: #FBECEB;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  color: #002447;
+  border: none;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #FBECEB;
+  background-color: #002447;
+}
+
+
+
+a {
+  color: #002470;
+  font-weight: bold;
+}

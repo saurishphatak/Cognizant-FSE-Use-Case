@@ -1,0 +1,16 @@
+<div class="no-bookings-div" *ngIf="ticketsByuser.length == 0">
+  <h1>No bookings yet!</h1>
+  <h3>Book a movie <a routerLink="/movies">now!</a></h3>
+</div>
+<div class="tickets" *ngIf="ticketsByuser.length > 0">
+  <div class="ticket" *ngFor="let ticket of ticketsByuser">
+    <img [src]="ticket.movieImageURL" [alt]="ticket.movieName">
+    <div class="ticket__content">
+      <h2>{{ticket.movieName}}</h2>
+      <h5><i>{{ticket.theatreName}}</i></h5>
+      <div class="divider"></div>
+      <p>Seats Numbers Booked</p>
+      <p>{{ticket.seatNumbers}}</p>
+    </div>
+  </div>
+</div>

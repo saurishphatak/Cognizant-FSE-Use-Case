@@ -1,0 +1,43 @@
+.form-group {
+  margin-top: 1rem;
+}
+
+h1 {
+  color: #002447;
+}
+
+.error-message {
+  color: red;
+  text-align: left;
+}
+
+.register-form {
+  text-align: center;
+  background-color: #FBECEB;
+  margin: auto;
+  width: 35%;
+  position: relative;
+  top: 60%;
+  translate: 0 -60%;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.2rem 0.2rem rgb(128, 128, 128, 0.3);
+  min-height: 70%;
+  /* border: 1px solid red; */
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  color: #002447;
+  border: none;
+  cursor: pointer;
+  background-color: #FEB249;
+  width: 100%;
+}
+
+button:hover {
+  color: #FBECEB;
+  background-color: #002447;
+}

@@ -1,0 +1,46 @@
+.container {
+  width: 500px;
+  min-width: 500px;
+  height: 250px;
+  /* border: 1px solid red; */
+  top: 30%;
+  display: flex;
+  position: relative;
+  margin: auto;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 0.5rem;
+  box-shadow: 0.3rem 0.3rem 1rem grey;
+  background-color: #fbeceb;
+  font-weight: bold;
+}
+
+h2 {
+  position: relative;
+  top: 20%;
+  text-align: center;
+}
+
+.img__container {
+  width: 200px;
+  /* border: 1px solid blue; */
+  position: absolute;
+  left: -5%;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0.3rem 0.3rem 1rem grey;
+}
+
+img {
+  width: 100%;
+}
+
+.content {
+  /* border: 1px solid green; */
+  text-wrap: wrap;
+  width: 50%;
+  margin-right: 5%;
+  text-align: center;
+
+}
