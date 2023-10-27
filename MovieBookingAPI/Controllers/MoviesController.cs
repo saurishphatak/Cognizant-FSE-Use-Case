@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MovieBookingAPI.Interfaces;
 using MovieBookingAPI.Models;
-
 namespace MovieBookingAPI.Controllers
 {
     [Route("api/v1.0/moviebooking")]
@@ -25,7 +24,7 @@ namespace MovieBookingAPI.Controllers
         public async Task<ActionResult<List<Movie>>> GetAll()
         {
             var movies = await _movieRepository.GetMovies();
-            if(movies.Count == 0 )
+            if (movies.Count == 0)
             {
                 return NoContent();
             }
@@ -55,7 +54,7 @@ namespace MovieBookingAPI.Controllers
         [Authorize(Roles = "Admin")]
         [HttpDelete]
         [Route("{moviename}/delete/{theatrename}")]
-        public async Task<ActionResult<string>> DeleteMovie(string moviename,string theatrename)
+        public async Task<ActionResult<string>> DeleteMovie(string moviename, string theatrename)
         {
             var response = await _movieRepository.DeleteMovie(moviename, theatrename);
             if (response)

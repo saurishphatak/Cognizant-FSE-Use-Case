@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using MovieBookingAPI.Interfaces;
 using MovieBookingAPI.Models;
 using System.Data;
-
+// mongodb + srv://sphatak2000:qwer123@cluster0.prtbocw.mongodb.net/?retryWrites=true&w=majority
 namespace MovieBookingAPI.Controllers
 {
     [Route("api/v1.0/moviebooking")]
@@ -26,12 +26,13 @@ namespace MovieBookingAPI.Controllers
         [Route("{moviename}/add")]
         public async Task<ActionResult> BookTickets([FromBody] Ticket ticket)
         {
-            var response =await _ticketRepository.BookTickets(ticket);
+            var response = await _ticketRepository.BookTickets(ticket);
             if (response == -1)
             {
                 return BadRequest("Booking failed as there is no requested number of seats");
             }
-            else if(response == 0){
+            else if (response == 0)
+            {
                 return BadRequest("You are trying to book already booked seat");
             }
             return Ok("Booked Successfully");
@@ -41,7 +42,7 @@ namespace MovieBookingAPI.Controllers
         [Authorize(Roles = "Admin")]
         [HttpPut]
         [Route("{moviename}/update/{theatrename}")]
-        public ActionResult UpdateStatus(string moviename,string theatrename)
+        public ActionResult UpdateStatus(string moviename, string theatrename)
         {
             var status = _ticketRepository.UpdateTicketStatus(moviename, theatrename);
             return Ok(status);
@@ -50,17 +51,17 @@ namespace MovieBookingAPI.Controllers
         [Authorize(Roles = "Admin, Member")]
         [HttpGet]
         [Route("{movieName}/getBookingInfo/{theatreName}")]
-        public  ActionResult GetBookInfo(string movieName,string theatreName)
+        public ActionResult GetBookInfo(string movieName, string theatreName)
         {
             Console.WriteLine($"{movieName} {theatreName}");
 
-            var getBookedTickets =  _ticketRepository.getBookedSeats(movieName,theatreName);
+            var getBookedTickets = _ticketRepository.getBookedSeats(movieName, theatreName);
             var totalSeats = _ticketRepository.getTotalTickets(movieName, theatreName);
-            return Ok(new 
+            return Ok(new
             {
-                totalSeatsAvailable=totalSeats,
-                bookedTickets=getBookedTickets,
-                
+                totalSeatsAvailable = totalSeats,
+                bookedTickets = getBookedTickets,
+
             });
         }
 
